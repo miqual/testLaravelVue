@@ -4375,6 +4375,8 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background-color: #1d68a7;
+  font-size:x-large;
 }
 
 .card-title {

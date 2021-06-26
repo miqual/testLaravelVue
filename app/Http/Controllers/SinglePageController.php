@@ -13,5 +13,8 @@ class SinglePageController extends BaseController
     public function index() {
         return view('app');
     }
+    public function demo() {
+        return view('demo');
+    }
 }
 

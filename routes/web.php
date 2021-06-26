@@ -17,4 +17,6 @@ use App\Http\Controllers\SinglePageController;
 //     return view('welcome');
 // });
 //  Route::get('/{any}', [SinglePageController::class, 'index']);
-Route::get('/{any}', 'App\Http\Controllers\SinglePageController@index')->where('any', '.*');
+// Route::get('/{any}', 'App\Http\Controllers\SinglePageController@index')->where('any', '.*');
+Route::get('/index', 'App\Http\Controllers\SinglePageController@index')->where('any', '.*');
+Route::get('/demo', 'App\Http\Controllers\SinglePageController@demo')->where('any', '.*');

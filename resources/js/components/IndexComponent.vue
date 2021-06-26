@@ -13,7 +13,13 @@
         </div>
     </div>
 </template>
-
+<style scoped>
+/* @import "../../../public/css/app.css"; */
+@import "../../css/app.css";
+/* .card-body{
+  background-color: #3982e5;
+} */
+</style>
 <script>
     export default {
         mounted() {
