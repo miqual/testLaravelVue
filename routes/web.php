@@ -20,3 +20,14 @@ use App\Http\Controllers\SinglePageController;
 // Route::get('/{any}', 'App\Http\Controllers\SinglePageController@index')->where('any', '.*');
 Route::get('/index', 'App\Http\Controllers\SinglePageController@index')->where('any', '.*');
 Route::get('/demo', 'App\Http\Controllers\SinglePageController@demo')->where('any', '.*');
+Route::get('/hello', 'App\Http\Controllers\SinglePageController@hello')->where('any', '.*');
+// Route::get('/hello', function () {
+//     return view('hello', ['name' => 'James11']);
+// });
+// Route::get("/hello", function(){
+//     return View::make("Hello");
+//  });
+// Route::get('/hello', 'App\Http\Controllers\SinglePageController@hello')->where('any', '.*');
+// Route::get('/', function () {
+//     return view('hello');
+// });

@@ -16,5 +16,11 @@ class SinglePageController extends BaseController
     public function demo() {
         return view('demo');
     }
+    public function hello() {
+        $name = "hhhhhh11";
+        // return view('hello',compact("name"));
+        // return view('hello',['name' => 'James']);
+        return view('hello')->with('name', $name);
+    }
 }
 

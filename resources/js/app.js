@@ -23,7 +23,8 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('index-component', require('./components/IndexComponent.vue').default);
 Vue.component('notFound-component', require('./components/NotFoundComponent.vue').default);
-
+Vue.component('hello', require('./components/Hello.vue').default);
+import Hello from './components/Hello'
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -37,5 +38,6 @@ Vue.component('notFound-component', require('./components/NotFoundComponent.vue'
 
 const app = new Vue({
     el: '#app',
-    router: Routes
+    router: Routes,
+    // components: { Hello }
 });
