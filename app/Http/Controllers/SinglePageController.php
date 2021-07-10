@@ -7,6 +7,8 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+use DB;
+
 class SinglePageController extends BaseController
 {
      use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -17,10 +19,18 @@ class SinglePageController extends BaseController
         return view('demo');
     }
     public function hello() {
-        $name = "hhhhhh11";
+        $name = "";
         // return view('hello',compact("name"));
         // return view('hello',['name' => 'James']);
-        return view('hello')->with('name', $name);
+
+        $places = DB::select('select * from places');
+     
+        $name =json_encode($places);
+
+        //return view('hello')->with('name', $name);
+        //return view('hello')->with('name', $name)->with('places', $places);
+        //return view('hello',['name' => $name,'places' => $places]);
+        return view('hello',['name' => $name,'places' => $name]);
     }
 }
 
